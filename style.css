@@ -1,0 +1,309 @@
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card img {
+  border-radius: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.card-group {
+  width: 50%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.footers {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+.footer {
+  font-weight: 900;
+}
+
+.container-fluid img {
+  mix-blend-mode: multiply;
+  width: 120px;
+  height: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .card-group {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .card-body p {
+    font-weight: 700;
+  }
+}
+@media only screen and (max-width: 365px) {
+  .footers b {
+    font-size: smaller;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .card img {
+    margin-left: 1%;
+  }
+}
+@media only screen and (max-width: 200px) {
+  .card img {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 305px) {
+  .logo {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 230px) {
+  .logos img {
+    width: 50px !important;
+  }
+  .navbar-brand {
+    font-size: 10px !important;
+    text-align: center !important;
+  }
+  .footer {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 358px) {
+  .heading {
+    text-align: center;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+}
+
+.small {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 9px;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 40px;
+  padding: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.inp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .navbar-toggler-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+.logos img {
+  width: 70px;
+  height: auto;
+}
+.navbar-brand {
+  font-size: 15px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+
+@media (max-width: 424px) {
+  .search2 {
+    width: 100%;
+  }
+}
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+.hide {
+  display: none;
+}
+.pokemon-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pokemon-img {
+  width: 150px;
+}
+.pokemon-details {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+}
+.abilities,
+.genders,
+.types,
+.weight,
+.height,
+.weakness,
+.category,
+.stats {
+  font-size: 15px;
+  margin-bottom: 3px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 300px) {
+  .abilities,
+  .genders,
+  .types,
+  .weight,
+  .height,
+  .weakness,
+  .category,
+  .stats {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 200px) {
+  .search::placeholder {
+    font-size: 5px !important;
+  }
+}
+
+#evolutions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.evolution-image {
+  width: 100px;
+}
+@media (max-width: 300px) {
+  .btn {
+    font-size: 12px;
+  }
+}
+.card-text {
+  font-size: 14px !important;
+}
+@media (max-width: 350px) {
+  .pokemon-image {
+    width: 180px !important;
+  }
+  .card-text {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 310px) {
+  .pokemon-image {
+    width: 150px !important;
+  }
+  .card-text {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 250px) {
+  .card-text {
+    font-size: 8px !important;
+  }
+}
+.card-title {
+  font-size: 15px !important;
+  font-weight: 600;
+}
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  position: relative;
+  animation: l9-0 1.5s infinite steps(2);
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #000;
+}
+.loader::before {
+  box-shadow: 26px 0;
+  transform: translateX(-26px);
+  animation: l9-1 .75s infinite linear alternate;
+}
+.loader::after {
+  transform: translateX(13px) rotate(0deg) translateX(13px);
+  animation: l9-2 .75s infinite linear alternate;
+}
+@keyframes l9-0 {
+    0% ,49.9% {transform: scale(1)}
+    50%,100%  {transform: scale(-1)}
+}
+@keyframes l9-1 {
+    100%{box-shadow: 52px 0}
+}
+@keyframes l9-2 {
+    100%{transform: translateX(13px) rotate(-180deg) translateX(13px)}
+}
+.loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
