@@ -268,7 +268,8 @@ body {
 .card-title {
   font-size: 15px !important;
   font-weight: 600;
-}
+/* }
+
 .loader {
   width: 15px;
   aspect-ratio: 1;
@@ -306,4 +307,4 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */ 
