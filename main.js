@@ -13,7 +13,6 @@ let types = document.querySelector(".types");
 let genders = document.querySelector(".genders");
 let stats = document.querySelector(".stats");
 let category = document.querySelector(".category");
-let evolutionsText = document.getElementById("evolutions-text")
 let detailsContainer = document.querySelector(".details-container");
 let cardContainer = document.querySelector(".cardcontainer");
 let pokemonCardContainer = document.querySelector(".pokemon-card-container");
@@ -170,10 +169,11 @@ searchBtn.addEventListener("click", () => {
   cardContainer.innerHTML=""
   searching.classList.remove("hide");
   card.classList.add("hide");
-  evolutionsText.classList.add("hide");
   detailsContainer.classList.add("hide");
   let evolutions = document.getElementById("evolutions");
+  let evolutionsTextDiv = document.querySelector(".evolutions-text-div");
   evolutions.innerHTML = "";
+  evolutionsTextDiv.innerHTML=""
   error.classList.add("hide");
   if (!pokemonSearch) {
     error.innerHTML = "Please Enter A Pokémon Name Or Id!";
@@ -193,11 +193,12 @@ searchBtn.addEventListener("click", () => {
       if (pokemon && pokemon.ID) {
         clearTimeout(searchTimeout);
         card.classList.remove("hide");
-        evolutionsText.classList.remove("hide")
+        
         detailsContainer.classList.remove("hide");
         search.value = "";
         error.classList.add("hide");
         pokemonImg.src = pokemon.pokemonPic;
+    
         name.innerHTML =
           "#" +
           pokemon.ID +
@@ -240,13 +241,15 @@ searchBtn.addEventListener("click", () => {
         )}`.trim();
         genders.innerHTML = ` <b>Gender:</b> ${pokemon.genders}`.trim();
         category.innerHTML = ` <b>Category:</b> ${pokemon.category} Pokemon`.trim();
-
+        const evolutionsText=document.createElement("p")
+        evolutionsText.textContent="Evolution Chain: "
+        evolutionsText.className="evolution-chain-text"
+        evolutionsTextDiv.appendChild(evolutionsText)
         for (let pic of pokemon.evolutionPics) {
-         
+          
           const img = document.createElement("img");
           img.src = pic;
           img.className = "evolution-image";
-          
           evolutions.appendChild(img);
         }
       }
