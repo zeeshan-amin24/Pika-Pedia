@@ -91,6 +91,7 @@ let pokemonsId= [
 let surpriseBtn=document.querySelector(".surprise-me-btn")
 surpriseBtn.addEventListener('click',()=>{
   let fetchCount=0
+  searching.classList.add("hide");
   cardContainer.innerHTML = "";
 searchBtn.disabled=true;
 surpriseBtn.disabled=true
@@ -164,6 +165,7 @@ randomNumbers.forEach((id)=>{
 
 
 searchBtn.addEventListener("click", () => {
+  surpriseBtn.disabled=true
   let pokemonSearch = search.value.toLowerCase();
   pokemonCardContainer.classList.remove("hide")
   cardContainer.innerHTML=""
@@ -176,6 +178,7 @@ searchBtn.addEventListener("click", () => {
   evolutionsTextDiv.innerHTML=""
   error.classList.add("hide");
   if (!pokemonSearch) {
+    clearTimeout(searchTimeout)
     error.innerHTML = "Please Enter A Pokémon Name Or Id!";
     error.classList.remove("hide");
     searching.classList.add("hide");
@@ -193,7 +196,7 @@ searchBtn.addEventListener("click", () => {
       if (pokemon && pokemon.ID) {
         clearTimeout(searchTimeout);
         card.classList.remove("hide");
-        
+        surpriseBtn.disabled=false
         detailsContainer.classList.remove("hide");
         search.value = "";
         error.classList.add("hide");
