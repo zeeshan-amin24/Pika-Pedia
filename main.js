@@ -156,7 +156,6 @@ randomNumbers.forEach((id)=>{
       if (fetchCount == 9 ) {
         searchBtn.disabled = false;
         surpriseBtn.disabled = false;
-        pokemonCardContainer.classList.remove("hide");
       }
     })
     
