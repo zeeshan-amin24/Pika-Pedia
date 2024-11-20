@@ -100,9 +100,14 @@ surpriseBtn.disabled=true
 for (let i = 0; i < 10; i++) {
   randomNumbers.push(pokemonsId[Math.floor(Math.random() * pokemonsId.length)]);
 }
+let loaderContainer = document.querySelector(".loader-container");
+let loader = document.querySelector(".loader");
 randomNumbers.forEach((id)=>{
   
   pokedex(id.toString(), (pokemon) => {
+     loaderContainer.style.display="flex"
+    loader.classList.remove("hide");
+    cardContainer.classList.add("hide");
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((response) => response.json())
     .then((pokemons) => {
@@ -153,15 +158,21 @@ randomNumbers.forEach((id)=>{
         </div>`;
       cardContainer.innerHTML += cardHTML;
     
-      if (fetchCount == 9 ) {
+      if (fetchCount == 10 ) {
         searchBtn.disabled = false;
         surpriseBtn.disabled = false;
+    loader.classList.add("hide")
+    cardContainer.classList.remove("hide")
+    loaderContainer.style.display="none"
       }
-    })
+    
+  
+      }
+    )})
     
     })
   
-  })}) 
+  })
 
 
 searchBtn.addEventListener("click", () => {
