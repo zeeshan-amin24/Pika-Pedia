@@ -270,7 +270,7 @@ body {
   font-size: 15px !important;
   font-weight: 600;
 }
-/* 
+
 
 .loader {
   width: 15px;
@@ -309,7 +309,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-} */ 
+  height: 70%;
+}  
  .surprise-me-img{
   width: 40px;
  mix-blend-mode: color-burn;
