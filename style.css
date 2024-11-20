@@ -332,6 +332,9 @@ body {
   cursor: pointer;
   margin-bottom: 15px;
  }
+.surprise-me-btn:hover{
+  background: rgb(42, 127, 161);
+ }
  .surprise-me-container{
   display: flex;
   justify-content: center;
