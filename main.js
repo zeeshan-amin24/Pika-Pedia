@@ -88,6 +88,7 @@ let pokemonsId= [
   1021, 1022, 1023,1024, 1025
 ]
 
+let loaderContainer = document.querySelector(".loader-container");
 let surpriseBtn=document.querySelector(".surprise-me-btn")
 surpriseBtn.addEventListener('click',()=>{
   let fetchCount=0
@@ -100,7 +101,6 @@ surpriseBtn.disabled=true
 for (let i = 0; i < 10; i++) {
   randomNumbers.push(pokemonsId[Math.floor(Math.random() * pokemonsId.length)]);
 }
-let loaderContainer = document.querySelector(".loader-container");
 let loader = document.querySelector(".loader");
 randomNumbers.forEach((id)=>{
   
@@ -176,6 +176,7 @@ randomNumbers.forEach((id)=>{
 
 
 searchBtn.addEventListener("click", () => {
+    loaderContainer.style.display="none"
   surpriseBtn.disabled=true
   let pokemonSearch = search.value.toLowerCase();
   pokemonCardContainer.classList.remove("hide")
