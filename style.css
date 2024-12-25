@@ -7,6 +7,7 @@ body {
 * {
   box-sizing: border-box;
   margin: 0;
+
 }
 
 nav{
@@ -348,13 +349,16 @@ nav{
     padding: 5px 10px;
     font-size: 15px;
   }
+  .title-2{
+    font-size: 20px!important;
+  }
  }
  @media (max-width: 420px){
   .surprise-me-btn{
     padding: 5px 12px;
   }
   .title-2{
-    font-size: 15px;
+    font-size: 15px!important;
   }
   .surprise-me-img{
     width: 30px;
@@ -368,7 +372,7 @@ nav{
     font-size: 14px;
   }
   .title-2{
-    font-size: 12px;
+    font-size: 12px!important;
   }
 
  }
@@ -384,6 +388,13 @@ nav{
  }
 @media(max-width: 250px){
   .title-2{
-    font-size: 11px!important;
+    font-size: 10px!important;
   }
+  .surprise-me-btn{
+    padding: 2px 8px;
+    font-size: 10px!important;
+  }
+  .surprise-me-img{
+    width: 30px;
+   }
 }
